@@ -19,6 +19,37 @@ $scope.addName = function(){
                 }
 
 
+
+
+
+	
+
+
+$scope.updateName = function(){
+                                var inputJson={"Id":$scope.Id,"LeadType":$scope.LeadType,"Status":$scope.Status,"FirstName":$scope.FirstName,"LastName":$scope.LastName,"Rating":$scope.Rating,"BusinessPhoneNumber":$scope.BusinessPhoneNumber,"Email":$scope.Email,"WinProbability":$scope.WinProbability};
+                                $http.put("https://octopusexcelacom-developer-edition.ap5.force.com/services/apexrest/Lead",inputJson).success(function(response) {
+
+						location.reload();
+
+                                                console.log("Deleted successfully");
+                                                 });
+                }
+
+
+$scope.deleteName = function(){
+                               
+                                $http.delete("https://octopusexcelacom-developer-edition.ap5.force.com/services/apexrest/Lead/"+$scope.Id).success(function(response) {
+
+						location.reload();
+
+                                                console.log("Deleted successfully");
+                                                 });
+                }
+
+
+
+
+
 	
 })
 
