@@ -8,72 +8,13 @@
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
 <script type="text/javascript" src="js/responsivetables.js"></script>
-	<link rel="stylesheet" href="css/responsivetables.css">
-<style type="text/css">
-		body, html {
-			padding:0px;
-			margin:0px;
-			background: #fff;
-			line-height: 1.4em;
-		}
-		.page{
-			padding: 5px 30px 30px 30px;
-			max-width: 800px;
-			margin: 0 auto;
-			font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
-		}
-		h1 {
-			line-height: 1.2em;
-		}
-		pre {
-			background: #333;
-			padding: 10px;
-			overflow: auto;
-			color: #BBB7A9;
-			}
-		.button {
-			text-decoration: none;
-			color: #F0353A;
-			border: 2px solid #F0353A;
-			padding: 6px 10px;
-			display: inline-block;
-			font-size: 18px;
-		}
-		.button:hover {
-			background:#F0353A;
-			color:#fff;
-		}
-		.demo {
-			text-align: center;
-			padding:30px 0
-		}
-		table {
-			border-width: 1px;
-			border-spacing: 0px;
-			border-style: none;
-			border-color: gray;
-			border-collapse: collapse;
-			font-size: 12px;
-			width:100%;
-		}
-		th {
-			background:#ddd;
-			color:#222;
-			padding:10px;
-			text-align:left;
-			border:1px solid #ccc;
-		}
-		td {
-			padding:10px;
-			border:1px solid #ccc;
-		}
-		tr:nth-child(2n) {
-			background:#eaeaea;
-		}
-	</style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
 	</head>
 	<body class='default'>
-	<div class="panel panel-success" ng-controller="controller" >
+	<div class="panel panel-info" ng-controller="controller" >
 		<div class="panel-heading">
 		   <h2 class="panel-title ">
 			  SalesForce Integration With External System Demo
@@ -89,25 +30,34 @@
 					<b> Sales Id</b>
 					</div>
 					<div  class="col-sm-2">
-					<input  ng-model="Id"  required ="required"/>
+					<input class="form-control" ng-model="id"  required ="required"/>
 					</div>
 					<div  class="col-sm-1">
 					<b> LeadType</b>
 					</div>
 					<div  class="col-sm-2">
-					<input  ng-model="LeadType"  required ="required"/>
+					<Select class="form-control" ng-model="leadtype" required ="required">
+						<option>Enterprise</option>
+						<option>Residential</option>
+						<option>Wholesale</option>
+					</Select>
 					</div>
 					<div  class="col-sm-1">
 					<b> Status</b>
 					</div>
 					<div  class="col-sm-2">
-					<input  ng-model="Status"  required ="required"/>
+					<Select class="form-control" ng-model="status"  required ="required">
+					    <option>Open-NotContacted</option>
+					    <option>Working-Contacted</option>
+				            <option>Closed-Converted</option>
+					    <option>Closed-NotConverted</option>
+					</Select>
 					</div>
 					<div  class="col-sm-1">
 					<b> FirstName</b>
 					</div>
 					<div  class="col-sm-2">
-					<input  ng-model="FirstName"  required ="required"/>
+					<input class="form-control" ng-model="firstname"  required ="required"/>
 					</div>
 </td>
 </tr>
@@ -123,25 +73,29 @@
 					<b> LastName</b>
 					</div>
 					<div  class="col-sm-2">
-					<input  ng-model="LastName"  required ="required"/>
+					<input class="form-control" ng-model="lastname"  required ="required"/>
 					</div>
 					<div  class="col-sm-1">
 					<b> Rating</b>
 					</div>
 					<div  class="col-sm-2">
-					<input  ng-model="Rating"  required ="required"/>
+					<Select class="form-control" ng-model="rating"  required ="required">
+					    <option>Hot</option>
+					    <option>Warm</option>
+				            <option>Cold</option>
+					</Select>
 					</div>
 <div  class="col-sm-1">
 					<b> Business Phone</b>
 					</div>
 					<div  class="col-sm-2">
-					<input  ng-model="BusinessPhoneNumber"  required ="required"/>
+					<input class="form-control" ng-model="businessphoneNumber"  required ="required"/>
 					</div>
 <div  class="col-sm-1">
 					<b> Email</b>
 					</div>
 					<div  class="col-sm-2">
-					<input  ng-model="Email"  required ="required"/>
+					<input class="form-control" ng-model="email"  required ="required"/>
 					</div>
 </td>
 </tr>
@@ -153,7 +107,7 @@
 					<b> Win Probability</b>
 					</div>
 					<div  class="col-sm-2">
-					<input  ng-model="WinProbability"  required ="required"/>
+					<input class="form-control" ng-model="winprobability"  required ="required"/>
 					</div>
 
 </div>
@@ -165,13 +119,13 @@
 <br>
 
 <div class="col-sm-1">
-					<button type="button" ng-click="addName()" class="btn btn-success" >Create</button>
+					<button type="button" ng-click="addName()" class="btn btn-info" >Create</button>
 					</div>
 <div class="col-sm-1">
-					<button type="button" ng-click="updateName()" class="btn btn-success" >Update</button>
+					<button type="button" ng-click="updateName()" class="btn btn-info" >Update</button>
 					</div>
 <div class="col-sm-1">
-					<button type="button" ng-click="deleteName()" class="btn btn-success" >Delete</button>
+					<button type="button" ng-click="deleteName()" class="btn btn-info" >Delete</button>
 					</div>
 				
 				<br>
@@ -182,9 +136,8 @@
 <br>
 <br>
 			<div class="container" > 
-			  <div class="row">
-				<div class="col-sm-10 ">
-					<table class="rwd-table" data-autogen-headers="true">
+			 
+					<table class="table">
 						<thead>
 							<tr>
 							<th >SalesForce Id</th>
@@ -200,21 +153,20 @@
 						</thead>
 						<tbody>
 							<tr ng-repeat="jsonValue in json ">
-							<td >{{jsonValue.Id}}</td>
-							<td >{{jsonValue.LeadType__c}}</td>
-							<td >{{jsonValue.Status}}</td>
-							<td >{{jsonValue.FirstName}}</td>
-							<td >{{jsonValue.LastName}}</td>
-							<td >{{jsonValue.Rating}}</td>
-							<td >{{jsonValue.Business_Phone_Number__c}}</td>
-							<td >{{jsonValue.Email}}</td>
-							<td >{{jsonValue.WinProbability__c}}</td>
+							<td >{{jsonValue.id}}</td>
+							<td >{{jsonValue.leadtype}}</td>
+							<td >{{jsonValue.status}}</td>
+							<td >{{jsonValue.firstname}}</td>
+							<td >{{jsonValue.lastname}}</td>
+							<td >{{jsonValue.rating}}</td>
+							<td >{{jsonValue.businessphoneNumber}}</td>
+							<td >{{jsonValue.email}}</td>
+							<td >{{jsonValue.winprobability}}</td>
 							<tr ng-repeat-end ng-hide="true"></tr>
 							</tr>
 						</tbody>
 					</table>
-				</div>
-			  </div>
+				
 			</div>
 		</div>
 	</div>

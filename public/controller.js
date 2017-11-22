@@ -3,14 +3,14 @@ var app = angular.module("serviceApp",[]);
 // var app = app();
 
 app.controller('controller', function ($scope,$window,$http) {
-	$http.get("https://octopusexcelacom-developer-edition.ap5.force.com/services/apexrest/Lead").success(function(response) {
+	$http.get("http://34.234.47.41:1200/get").success(function(response) {
 				 $scope.json = response;
        			 });
 
 
 $scope.addName = function(){
-                                var inputJson={"LeadType":$scope.LeadType,"Status":$scope.Status,"FirstName":$scope.FirstName,"LastName":$scope.LastName,"Rating":$scope.Rating,"BusinessPhoneNumber":$scope.BusinessPhoneNumber,"Email":$scope.Email,"WinProbability":$scope.WinProbability};
-                                $http.post("https://octopusexcelacom-developer-edition.ap5.force.com/services/apexrest/Lead",inputJson).success(function(response) {
+                                var inputJson={"leadtype":$scope.leadtype,"status":$scope.status,"firstname":$scope.firstname,"lastname":$scope.lastname,"rating":$scope.rating,"businessphoneNumber":$scope.businessphoneNumber,"email":$scope.email,"winprobability":$scope.winprobability};
+                                $http.post("http://34.234.47.41:1200/createSales",inputJson).success(function(response) {
 
 						location.reload();
 
@@ -26,19 +26,19 @@ $scope.addName = function(){
 
 
 $scope.updateName = function(){
-                                var inputJson={"Id":$scope.Id,"LeadType":$scope.LeadType,"Status":$scope.Status,"FirstName":$scope.FirstName,"LastName":$scope.LastName,"Rating":$scope.Rating,"BusinessPhoneNumber":$scope.BusinessPhoneNumber,"Email":$scope.Email,"WinProbability":$scope.WinProbability};
-                                $http.put("https://octopusexcelacom-developer-edition.ap5.force.com/services/apexrest/Lead",inputJson).success(function(response) {
+                                var inputJson={"Id":$scope.Id,"leadtype":$scope.leadtype,"status":$scope.status,"firstname":$scope.firstname,"lastname":$scope.lastname,"rating":$scope.rating,"businessphoneNumber":$scope.businessphoneNumber,"email":$scope.email,"winprobability":$scope.winprobability};
+                                $http.put("http://34.234.47.41:1200/updateSales",inputJson).success(function(response) {
 
 						location.reload();
 
-                                                console.log("Deleted successfully");
+                                                console.log("Updated successfully");
                                                  });
                 }
 
 
 $scope.deleteName = function(){
                                
-                                $http.delete("https://octopusexcelacom-developer-edition.ap5.force.com/services/apexrest/Lead/"+$scope.Id).success(function(response) {
+                                $http.delete("http://34.234.47.41:1200/deleteSales/"+$scope.Id).success(function(response) {
 
 						location.reload();
 
