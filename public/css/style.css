@@ -1,16 +1,9 @@
-label.required:after {content: " *"; color: red;}
-body::-webkit-scrollbar {
-    width: 1em;
-}
- 
-body::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-}
- 
-body::-webkit-scrollbar-thumb {
-  background-color: darkgrey;
-  outline: 1px solid slategrey;
+li:hover {
+	background-color: tomato;
+	transition: 0.7s;
+	cursor: pointer;
 }
 
-
-
+span{
+	float: right;
+}
