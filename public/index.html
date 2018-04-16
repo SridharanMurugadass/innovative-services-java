@@ -1,47 +1,727 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-<head>
-  <script data-ionic="inject">
-    (function(w){var i=w.Ionic=w.Ionic||{};i.version='3.1.1';i.angular='4.0.2';i.staticDir='build/';})(window);
-  </script>
-  <meta charset="UTF-8">
-  <title>Donor App</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta name="format-detection" content="telephone=no">
-  <meta name="msapplication-tap-highlight" content="no">
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-  <link rel="icon" type="image/x-icon" href="assets/icon/favicon.ico">
- <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet"> 
-<!-- <link rel="manifest" href="assets/css/css.css"> -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <!--        <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">-->
 
-  <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#4e8ef7">
+
+        <!--For Plugins external css-->
+        <link rel="stylesheet" href="assets/css/plugins.css" />
+
+        <!--Theme custom css -->
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <!--Theme Responsive css-->
+        <link rel="stylesheet" href="assets/css/responsive.css" />
+
+        <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    </head>
+    <body data-spy="scroll" data-target="#main-navbar">
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+		
+		<div class='preloader'><div class='loaded'>&nbsp;</div></div>
+        <div id="menubar" class="main-menu">	
+            <nav class="navbar navbar-default navbar-fixed-top">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" style = "width: 100px;height: 100px;" alt="" /></a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="active"><a href="#home">Home<span class="sr-only">(current)</span></a></li>
+                            <li><a href="#works-area">Products</a></li>
+                            <li><a href="#our-team">About</a></li>
+                            <li><a href="#our-portfolio">Portfolio</a></li>
+                            <li><a href="#our-history">Academic</a></li>
+                            <li><a href="#our-feature">Blog</a></li>
+                            <li><a href="#">Contact Us</a></li>
+
+                            <div class="contact-number text-right"> 
+                                <ul><li class=""></li></ul>
+                            </div>
+
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+        </div>
+        <!--Home page style-->
+        <header id="home" class="sections">
+            <div class="container">
+
+                <div class="row">
+                    <div class="homepage-style">
+
+                        <div class="top-arrow hidden-xs text-center"><img src="assets/images/top-arrow.png" alt="" /></div>
+
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="unique-apps">
+                                <h2>UNIQUE-TECH<br>APP DEVELOPMENT </h2>
+                                <p>
+                                    Bot2Do aims, inter alia, to help developing organizations make wise investments in using Information and Communication Technologies (ICT) to address core development and untapped potential of young career aspirants. Our work focuses on three important areas of the
+ICT for Development agenda: 
+ICT-enabled Innovation and Entrepreneurship, Access to ICTs,
+Mainstreaming ICTs in sectors such as education.
  
-  <!-- cordova.js required for cordova apps -->
-  <script src="cordova.js"></script>
+                                </p>
 
-  <!-- un-comment this code to enable service worker
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('service-worker.js')
-        .then(() => console.log('service worker installed'))
-        .catch(err => console.log('Error', err));
-    }
-  </script>-->
+                                <div class="home-btn"><button class="btn btn-primary">View More <span><i class="fa fa-paper-plane"></i></span></button></div>
+                            </div>
+                        </div>
 
-  <link href="build/main.css" rel="stylesheet">
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="slider-area">
 
-</head>
-<body>
+                                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="3000">
+                                    <!-- Indicators -->
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                                        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
 
-  <!-- Ionic's root component and where the app will load -->
-  <ion-app></ion-app>
+                                    </ol>
 
-  <!-- The polyfills js is generated during the build process -->
-  <script src="build/polyfills.js"></script>
+                                    <!-- Wrapper for slides -->
+                                    <div class="carousel-inner" role="listbox">
 
-  <!-- The bundle js is generated during the build process -->
-  <script src="build/main.js"></script>
+                                        <div class="item active">
+                                            <img src="assets/images/slider-img.png" alt="" />
+                                        </div>
 
-</body>
+                                        <div class="item">
+                                            <img src="assets/images/slider-img.png" alt="" />
+                                        </div>
+
+                                        <div class="item">
+                                            <img src="assets/images/slider-img.png" alt="" />
+                                        </div>
+
+                                        <div class="item">
+                                            <img src="assets/images/slider-img.png" alt="" />
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>	
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- Sections -->
+        <section id="our-portfolio" class="sections">
+            <div class="container">
+
+                <div class="row">
+                    <div class="heading">
+                        <div class="title text-center arrow-right">
+                            <h4 class="">WHAT WE DO </h4>
+                            <img class="hidden-xs" src="assets/images/right-arrow.png" alt="" />
+
+                        </div>
+                    </div>	
+
+
+                    <!-- Example row of columns -->
+
+                    <div class="portfolio-wrap">
+
+                        <div class="portfolio">
+
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <img src="assets/images/monitor.png" alt="" />
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="portfolio-item">
+                                    <h4>WEB DESIGN</h4>
+                                    <p>
+                                        Web design encompasses many different skills and disciplines in the production and maintenance of websites. The different areas of web design include web graphic design; interface design; authoring, including standardised code and proprietary software; user experience design; and search engine optimization.
+                                    </p>
+                                    <button class="btn pt-btn btn-primary">View More</button>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="portfolio">
+
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="portfolio-item">
+                                    <h4>SEARCH ENGINE OPTIMIZATION</h4>
+                                    <p>
+                                        Search engine optimization (SEO) is the process of affecting the online visibility of a website or a web page in a web search engine's unpaid results—often referred to as "natural", "organic", or "earned" results. In general, the earlier (or higher ranked on the search results page), and more frequently a website appears
+                                    </p>
+                                    <button class="btn pt-btn btn-primary">View More</button>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <img class="portfolio-img img-responsive" src="assets/images/monitor.png" alt="" />
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="portfolio">
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <img class="portfolio-img img-responsive" src="assets/images/monitor.png" alt="" />
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="portfolio-item">
+                                    <h4>AFFILIATE MARKETING</h4>
+                                    <p>
+                                        Affiliate marketing is the process of earning a commission by promoting other people's (or company's) products. You find a product you like, promote it to others and earn a piece of the profit for each sale that you make.
+                                    </p>
+                                    <button class="btn pt-btn btn-primary">View More</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- /container -->       
+        </section>
+
+        <section id="works-area" class="sections">
+            <div class="container text-center">
+
+                <div class="heading">
+                    <div class="title text-center arrow-left">
+                        <img class="hidden-xs" src="assets/images/left-arrow.png" alt="" />
+
+                        <h4 class="">HOW WE WORKS </h4>
+                    </div>
+                </div>	
+
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="main-works">
+                            <img src="assets/images/map.png" alt="" />
+                        </div>
+                    </div>
+                </div>	
+            </div>
+        </section>
+
+        <section id="our-feature" class="sections">
+            <div class="container">
+                <div class="heading">
+                    <div class="title text-center arrow-left">
+                        <img class="hidden-xs" src="assets/images/left-arrow.png" alt="" />
+
+                        <h4 class="">Our Features</h4>
+                    </div>
+                </div>
+
+                <div class="feature-wrapper">
+                    <div class="row">
+
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="features-content active"> 
+                                <h4><i class="fa fa-database"></i><span>Visual Composer</span></h4>
+                               <p></p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="features-content"> 
+                                <h4><i class="fa fa-database"></i><span>Responsive</span></h4>
+                                <p></p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="features-content"> 
+                                <h4><i class="fa fa-database"></i><span>ChatBot Api's</span></h4>
+                                <p></p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="features-content"> 
+                                <h4><i class="fa fa-database"></i><span>NoSql Techs</span></h4>
+                                <p></p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="features-content"> 
+                                <h4><i class="fa fa-database"></i><span>Cloud Ready</span></h4>
+                                <p></p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="features-content"> 
+                                <h4><i class="fa fa-database"></i><span>Platform as service</span></h4>
+                                <p></p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="features-content"> 
+                                <h4><i class="fa fa-database"></i><span>Automation Engine</span></h4>
+                                <p></p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="features-content"> 
+                                <h4><i class="fa fa-database"></i><span>Framework Enabled</span></h4>
+                                <p></p>
+                            </div>
+                        </div>
+
+                       
+
+                       
+
+                      
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="features-content"> 
+                                <h4><i class="fa fa-database"></i><span>Devops Ready</span></h4>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>	
+                </div>		
+
+
+            </div>
+
+
+        </section>
+
+        <section id="our-package" class="sections lightbg">
+            <div class="container">
+
+                <div class="heading">
+                    <div class="title text-center arrow-left">
+                        <img class="hidden-xs" src="assets/images/left-arrow.png" alt="" />
+
+                        <h4 class="">Our Packages</h4>
+                    </div>
+                </div>
+
+                <div class="row">
+
+
+                    <div class="main-package text-center">
+                        <div class="col-md-4 col-sm-12 col-xs-12">
+                            <div class="package-item basic">
+
+                                <h5>Basic</h5>
+
+                                <ul>
+                                    <li>5 web sites</li>
+                                    <li>5 e-mails</li>
+                                    <li>5 MySQL databases</li>
+                                    <li>5 MySQL databases</li>
+                                    <li>10 GB storage</li>
+                                </ul>
+
+                                <div class="package-bottom-area">
+                                    <h3>$5/<span>mo.</span></h3>
+                                </div>
+
+                                <div class="pkg-btn"><a href="" class="btn btn-primary">ORDER NOW</a></div>
+
+                            </div>
+
+
+                        </div>
+
+                        <div class="col-md-4 col-sm-12 col-xs-12">
+                            <div class="package-item standard">
+
+                                <h5>Standard</h5>
+
+                                <ul>
+                                    <li>5 web sites</li>
+                                    <li>5 e-mails</li>
+                                    <li>5 MySQL databases</li>
+                                    <li>5 MySQL databases</li>
+                                    <li>10 GB storage</li>
+                                </ul>
+
+                                <div class="package-bottom-area">
+                                    <h3>$12<span>/mo.</span></h3>
+                                </div>
+
+                                <div class="pkg-btn"><a href="" class="btn btn-primary">ORDER NOW</a></div>
+
+                            </div>
+
+
+                        </div>
+
+                        <div class="col-md-4 col-sm-12 col-xs-12">
+                            <div class="package-item premium">
+
+                                <h5>Premium</h5>
+
+                                <ul>
+                                    <li>5 web sites</li>
+                                    <li>5 e-mails</li>
+                                    <li>5 MySQL databases</li>
+                                    <li>5 MySQL databases</li>
+                                    <li>10 GB storage</li>
+                                </ul>
+
+                                <div class="package-bottom-area">
+                                    <h3>$19<span>/mo.</span></h3>
+                                </div>
+
+                                <div class="pkg-btn"><a href="" class="btn btn-primary">ORDER NOW</a></div>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>	
+        </section>
+
+        <section id="our-history" class="sections">
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="main-history">
+
+                        <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="history-img">
+                                <img src="assets/images/history-img.png" alt="" />
+                            </div>
+                        </div>
+
+
+
+                        <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="history-wrapper">
+                                <div class="history-heading"> 
+                                    <h5 class="our-history">Our History</h5>
+                                </div>
+
+                                <div class="history-content">
+                                    <p>
+                                        In its ICT-enabled Innovation and Entrepreneurship Program, Bot2Do focuses primarily on
+                                        business incubation as a tool for creation of a competitive SME sector. This business incubator will provide us the fledgling businesses with shared access to infrastructure such as information and communication technologies, and access to business services, finance, mentoring and coaching. We enable job and small enterprise creation, as well as the commercialization of innovation with immense social value, such B2C products as Selection of Spectacles and Face recognition based attendance system.
+                                        
+                                        Bot2Do is now facing increased demand for leveraging its experience to catalyze the startup and strengthening of business to create specialized knowledge on particular types of businesses – notably those that are focused on Machine Learning, Cloud Computing, Internet of Things, SaaS and Artificial Intelligence, as well as those that focus on high growth ICT enterprise development; and to continue to enable intra-organizational knowledge sharing and partnership opportunities between its members. 
+                                        
+                                    </p>
+
+                                   
+
+                                    <div class="hst-btn"><button class="btn btn-primary">BROWSE OUR HISTORY</button></div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="our-project" class="sections">
+            <div class="container">
+
+                <div class="heading">
+                    <div class="title text-center arrow-left">
+
+                        <h4 class="">Our Business Project</h4>
+                        <img class="hidden-xs" src="assets/images/right-arrow.png" alt="" />
+                    </div>
+                </div>
+
+                <div class="row">
+
+
+                    <div class="main-project text-center">
+
+                      
+
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="project-item">
+                                <div class="project-photo"><img src="assets/images/projects/2.png" alt="" /></div>
+                                <h5>SECURE ACCESS</h5>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="project-item">
+                                <div class="project-photo"><img src="assets/images/projects/3.png" alt="" /></div>
+                                <h5>MARKET RESERCH</h5>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="project-item">
+                                <div class="project-photo"><img src="assets/images/projects/4.png" alt="" /></div>
+                                <h5>CREDIT RESERCH</h5>
+                            </div>
+                        </div>
+
+                       
+                       
+
+                       
+
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="project-item">
+                                <div class="project-photo"><img src="assets/images/projects/8.png" alt="" /></div>
+                                <h5>TECHNICAL AID</h5>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="our-team" class="sections">
+            <div class="container">
+
+                <div class="heading">
+                    <div class="title text-center arrow-left">
+                        <img class="hidden-xs" src="assets/images/left-arrow.png" alt="" />
+
+                        <h4 class="">Our Team Members</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid project-bg">
+                <div class="row">
+
+                    <div class="main-team text-center">
+
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="team-member">
+
+                                <img class="img-circle" src="assets/images/team/1.png" alt="" />
+                                <h5>Dhinakaran</h5>
+                                <p>Founder & Head</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="team-member">
+                                <img class="img-circle" src="assets/images/team/2.png" alt="" />
+                                <h5>Guna</h5>
+                                <p>Co-Founder</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="team-member">
+                                <img class="img-circle" src="assets/images/team/3.png" alt="" />
+                                <h5>Prasad</h5>
+                                <p>Co-Founder</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="team-member">
+                                <img class="img-circle" src="assets/images/team/4.png" alt="" />
+                                <h5>Sridharan</h5>
+                                <p>Co-Founder</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="our-supports" class="sections">
+            <div class="container">
+
+                <div class="heading">
+                    <div class="title text-center arrow-left">
+
+                        <h4 class="">Updates & Support</h4>
+                        <img class="hidden-xs" src="assets/images/right-arrow.png" alt="" />
+                    </div>
+                </div>
+
+                <!-- Example row of columns -->
+                <div class="row">
+
+
+                    <div class="col-sm-6 col-xs-12">
+                        <div class="supports-content">
+                            <p>
+                                SupportCenter Plus is a web-based customer support software that lets organizations effectively manage customer tickets, their account & contact information, the service contracts and in the process providing a superior customer experience.
+                            </p>
+                            <div class="spt-btn"><button class="btn btn-primary">SUPPORT CENTER</button></div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-xs-12">
+                        <div class="supports-img"><img class="img-responsive" src="assets/images/monitor.png" alt="" /></div>
+                    </div>
+
+
+                </div>
+
+            </div> <!-- /container -->       
+        </section>
+
+        <section id="hire-us" class="sections">
+
+            <div class="container">
+
+                <!-- Example row of columns -->
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="hire-content">
+                            <div class="img-overlay">
+
+                                <div class="creative-works">
+                                    <h3>NEED CREATIVE WORKERS?</h3>
+                                    <button class="btn hire-btn btn-primary">HIRE US</button>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div> <!-- /container -->  
+
+        </section>
+
+        <div class="scroll-top">
+
+            <div class="scrollup">
+                <i class="fa fa-angle-double-up"></i>
+            </div>
+
+        </div>
+
+        <!--Footer-->
+        <footer id="footer" class="footer">
+            <div class="container">
+
+                <div class="row">
+                    <div class="main-footer">
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="footer-item">
+                                <h2>PORTFOLIO</h2>
+                                <ul>
+                                    <li><a href="#">Web Design</a></li>
+                                    <li><a href="#">Brand & Identity</a></li>
+                                    <li><a href="#">Mobile Design</a></li>
+                                    <li><a href="#">Print</a></li>
+                                    <li><a href="#">User Interface</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="footer-item">
+                                <h2>ABOUT</h2>
+                                <ul>
+                                    <li><a href="#">The Company</a></li>
+                                    <li><a href="#">History</a></li>
+                                    <li><a href="#">Vision</a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="footer-item">
+                                <h2>GALLERY</h2>
+                                <ul>
+                                    <li><a href="#">lickr</a></li>
+                                    <li><a href="#">Picasa</a></li>
+                                    <li><a href="#">iStockPhoto</a></li>
+                                    <li><a href="#">PhotoDune</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="footer-item">
+                                <h2>CONTACT</h2>
+                                <ul>
+                                    <li><a href="#">Basic Info</a></li>
+                                    <li><a href="#">Map</a></li>
+                                    <li><a href="#">Conctact Form</a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="socio-copyright">
+
+                        <div class="social">
+                            <a target="_blank" href="#"><i class="fa fa-facebook"></i></a>
+                            <a target="_blank" href="#"><i class="fa fa-twitter"></i></a>
+                            <a target="_blank" href="#"><i class="fa fa-google-plus"></i></a>
+                            <a target="_blank" href="#"><i class="fa fa-linkedin"></i></a>
+                        </div>
+
+                        <p>Devloped by <a target="_blank" href=""> Bot2Do </a>2018. All rights reserved.</p>
+                    </div>
+
+                </div>	
+            </div>
+
+        </footer>
+
+
+        <script src="assets/js/vendor/jquery-1.11.2.min.js"></script>
+        <script src="assets/js/vendor/bootstrap.min.js"></script>
+
+        <script src="assets/js/plugins.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
 </html>
